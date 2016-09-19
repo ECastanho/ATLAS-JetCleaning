@@ -16,6 +16,9 @@
 #include <TTree.h>
 #include <vector>
 
+#include "TCanvas.h"
+#include <sstream>
+
 class HIHI_TMVA : public EL::Algorithm
 {
 
