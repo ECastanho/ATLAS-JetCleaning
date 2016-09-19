@@ -851,6 +851,251 @@ EL::StatusCode HIHI_TMVA :: histFinalize ()
   // outputs have been merged.  This is different from finalize() in
   // that it gets called on all worker nodes regardless of whether
   // they processed input events.
+  
+  
+  
+  //print dos graficos. tenho ainda que verificar se estão Realmente todos, ie, se não pulei nenhum acidentalmente.
+    for (int i = 0; i < nCentBins; i++)
+  {
+
+
+      h2_Jet_Pt[i]->Draw("colz");
+      string s0 ="images/h2_Jet_Pt.pdf";
+      ss << s0 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_deltaphi[i]->Draw("colz");
+      string s1 ="images/h3_pt_deltaphi.pdf";
+      ss << s1 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_jetkin[i]->Draw("colz");
+      string s2 ="images/h3_pt_jetkin.pdf";
+      ss << s2 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_hmiss[i]->Draw("colz");
+      string s3 ="images/h3_pt_hmiss.pdf";
+      ss << s3 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h2_Jet_fr_Pt[i]->Draw("colz");
+      string s4 ="images/h2_Jet_fr_Pt.pdf";
+      ss << s4 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_deltaphi[i]->Draw("colz");
+      string s5 ="images/h3_pt_fr_deltaphi.pdf";
+      ss << s5 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_jetkin[i]->Draw("colz");
+      string s6 ="images/h3_pt_fr_jetkin.pdf";
+      ss << s6 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_FracSamplingMaxIndex[i]->Draw("colz");
+      string s7 ="images/h3_pt_fr_FracSamplingMaxIndex.pdf";
+      ss << s7 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_AverageLArQF[i]->Draw("colz");
+      string s8 ="images/h3_pt_fr_AverageLArQF.pdf";
+      ss << s8 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_HECQuality[i]->Draw("colz");
+      string s9 ="images/h3_pt_fr_HECQuality.pdf";
+      ss << s9 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_Width[i]->Draw("colz");
+      string s10 ="images/h3_pt_fr_Width.pdf";
+      ss << s10 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_fch[i]->Draw("colz");
+      string s11 ="images/h3_pt_fr_fch.pdf";
+      ss << s11 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_fchFracSamplingMax[i]->Draw("colz");
+      string s12 ="images/h3_pt_fr_fchFracSamplingMax.pdf";
+      ss << s12 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_fchFracSamplingMax[i]->Draw("colz");
+      string s13 ="images/h3_pt_fr_fchFracSamplingMax.pdf";
+      ss << s13 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_EMFrac[i]->Draw("colz");
+      string s14="images/h3_pt_fr_EMFrac.pdf";
+      ss << s14<< i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_HECFrac[i]->Draw("colz");
+      string s15 ="images/h3_pt_fr_HECFrac.pdf";
+      ss << s15<< i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_Timing[i]->Draw("colz");
+      string s16="images/h3_pt_fr_Timing.pdf";
+      ss << s16<< i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_LArQuality[i]->Draw("colz");
+      string s17="images/h3_pt_fr_LArQuality.pdf";
+      ss << s17<< i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fr_LArQualityEMFrac[i]->Draw("colz");
+      string s18="images/h3_pt_fr_LArQualityEMFrac.pdf";
+      ss << s18<< i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_FracSamplingMax[i]->Draw("colz");
+      string s19="images/h3_pt_FracSamplingMax.pdf";
+      ss << s19<< i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_AverageLArQF[i]->Draw("colz");
+      string s20="images/h3_pt_AverageLArQF.pdf";
+      ss << s20 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_HECQuality[i]->Draw("colz");
+      string s21 ="images/h3_pt_HECQuality.pdf";
+      ss << s21 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_Width[i]->Draw("colz");
+      string s22 ="images/h3_pt_Width.pdf";
+      ss << s22 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fch[i]->Draw("colz");
+      string s23 ="images/h3_pt_fch.pdf";
+      ss << s23 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fchFracSamplingMax[i]->Draw("colz");
+      string s24 ="images/h3_pt_fchFracSamplingMax.pdf";
+      ss << s24 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_fchEMFrac[i]->Draw("colz");
+      string s25 ="images/h3_pt_fchEMFrac.pdf";
+      ss << s25 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_EMFrac[i]->Draw("colz");
+      string s26 ="images/h3_pt_EMFrac.pdf";
+      ss << s26 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_HECFrac[i]->Draw("colz");
+      string s27 ="images/h3_pt_HECFrac.pdf";
+      ss << s27 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_Timing[i]->Draw("colz");
+      string s28 ="images/h3_pt_Timing.pdf";
+      ss << s28 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_LArQuality[i]->Draw("colz");
+      string s29 ="images/h3_pt_LArQuality.pdf";
+      ss << s29 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+      //////////
+      h3_pt_LArQualityEMFrac[i]->Draw("colz");
+      string s30 ="images/h3_pt_LArQualityEMFrac.pdf";
+      ss << s30 << i; 
+      c->Print(ss.str().c_str());
+      c->Clear();
+      ss.str("");
+        };
+   
+
+
+      h2_Jet_EtaPhi->Draw("colz");
+      c->Print("images/h2_Jet_EtaPhi.pdf");
+      c->Clear();
+      //////////
+      h2_Jet_PtNconst->Draw("colz");
+      c->Print("images/h2_Jet_PtNconst.pdf");
+      c->Clear();
+      //////////
+      h2_Jet_PtMass->Draw("colz");
+      c->Print("images/h2_Jet_PtMass.pdf");
+      c->Clear();
+      //////////
+      h2_Jet_Etconst->Draw("colz");
+      c->Print("images/h2_Jet_Etconst.pdf");
+      c->Clear();
+      //////////
+
 
 
   return EL::StatusCode::SUCCESS;
